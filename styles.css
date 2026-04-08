@@ -1130,3 +1130,72 @@ h1, h2, h3, h4, h5, h6 {
         order: 3;
     }
 }
+
+.footer {
+    background-image: url(assets/images/backgroundNoise.png);
+    padding: 20px 0;
+}   
+
+
+.company-info {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    border: #CFD1D4 2px solid;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: white;
+}
+
+.company-logo img {
+    width: 109px;
+    height: 45px;
+}
+
+.company-message {
+    align-items: right;
+}
+
+.footer-highlight {
+    color: #2B3990;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+}
+
+.footer-col p {
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.footer-bottom p {
+    font-size: 8px;
+    color: #535A61;
+}
