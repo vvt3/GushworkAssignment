@@ -191,3 +191,38 @@ document.querySelectorAll(".faq-item").forEach(item => {
     item.classList.toggle("active");
   });
 });
+
+// Image gallery functionality
+const thumbs = document.querySelectorAll(".thumb");
+const nextBtn = document.querySelector(".arrow.right");
+const prevBtn = document.querySelector(".arrow.left");
+
+let currentIndex = 0;
+
+// convert thumbnails into image array
+const images = Array.from(thumbs).map(img => img.src);
+
+// show image
+function showImage(index) {
+  currentIndex = index;
+  mainImg.src = images[currentIndex];
+}
+
+// next
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+});
+
+// previous
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+});
+
+// thumbnail click
+thumbs.forEach((thumb, index) => {
+  thumb.addEventListener("click", () => {
+    showImage(index);
+  });
+});
