@@ -226,3 +226,24 @@ thumbs.forEach((thumb, index) => {
     showImage(index);
   });
 });
+
+// Applications section horizontal scroll
+const container = document.getElementById("cardContainer");
+const leftBtn = document.querySelector(".scroll-left");
+const rightBtn = document.querySelector(".scroll-right");
+
+const scrollAmount = 300;
+
+rightBtn.addEventListener("click", () => {
+  container.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+});
+
+leftBtn.addEventListener("click", () => {
+  container.scrollBy({
+    left: -scrollAmount,
+    behavior: "smooth"
+  });
+});
