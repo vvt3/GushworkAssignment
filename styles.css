@@ -3,7 +3,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  
 }
 
 @font-face {
@@ -970,19 +970,50 @@ h1, h2, h3, h4, h5, h6 {
 .applications-cards {
     display: flex;
     gap: 20px;
-    overflow-x: auto;
     scroll-behavior: smooth;
+    overflow-x: auto;
+    overflow-y: hiddenl
 }
 
 .applications-card {
-  flex-shrink: 0;
-  border-radius: 20px;
-  overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
 }
 
 .applications-card img {
-  max-width: 420px;
-  max-height: 420px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+    max-width: 420px;
+    max-height: 420px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0) 
+    );
+}
+
+.card-overlay h2 {
+    color: white;
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.card-overlay p {
+    color: #ddd;
+    font-size: 13px;
+    margin: 0;
 }
